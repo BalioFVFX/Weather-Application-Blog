@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_town_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/et_town_name"
+        android:layout_toStartOf="@id/et_town_name"
+        android:text="Town: "/>
+    <TextView
+        android:id="@+id/tv_country_letters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/et_country_letters"
+        android:layout_alignBaseline="@id/et_country_letters"
+        android:text="Country: "/>
+
+    <EditText
+        android:id="@+id/et_town_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Rome"
+        android:layout_centerInParent="true"/>
+    <EditText
+        android:id="@+id/et_country_letters"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="IT"
+        android:layout_below="@id/et_town_name"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_country_letters"
+        android:text="SEARCH"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_search"
+        android:layout_centerInParent="true"
+        android:textSize="29sp"
+        android:text="Temperature: 0°" />
+
+</RelativeLayout>
